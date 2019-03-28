@@ -1,0 +1,8 @@
+body{
+    background-image: url("vista/src/back2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: black;
+    shadow: 2px 2px black
+}	

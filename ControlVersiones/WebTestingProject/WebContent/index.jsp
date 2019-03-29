@@ -108,7 +108,7 @@
 								<input type="checkbox" /> Check me out
 							</label>
 						</div> 
-						<button onclick="" class="btn btn-primary">
+						<button onclick="moveUserData('signup')" class="btn btn-primary">
 							Submit
 						</button>
 					</form>

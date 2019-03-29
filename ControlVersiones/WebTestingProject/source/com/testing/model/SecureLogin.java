@@ -11,7 +11,7 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name = "securelogin")
+@Table(name = "SecureLogin")
 public class SecureLogin {
 	@Id
 	@Column(name = "user")

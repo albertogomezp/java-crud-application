@@ -27,6 +27,8 @@ import com.testing.security.*;
 
 @WebServlet("/Core")
 public class Core extends HttpServlet {
+	
+	
 	private static final long serialVersionUID = 1L;
 	private static TestingDAO testingDAO;
 	private static SecureLogin currentUser = new SecureLogin();
@@ -35,6 +37,11 @@ public class Core extends HttpServlet {
 	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		String action = request.getParameter("action");
+		System.out.println(request.getParameter("user"));
+		System.out.println(request.getParameter("password"));
+		System.out.println(request.getParameter("action"));
+
+		
 			try {
 				switch(action) {
 				case "testconection":
@@ -64,9 +71,8 @@ public class Core extends HttpServlet {
 		SecureLogin almacenado = buscalogin(request.getParameter("user"));
 		if( almacenado.getUser().equals(request.getParameter("user"))  ) {
 			
-		
 		try {
-				
+			System.out.println("dentro del try");
 			if(Passwords.validatePassword(request.getParameter("password"),almacenado.getPassword())){
 					currentUser.setUser(almacenado.getUser());
 					RequestDispatcher dispatcher = request.getRequestDispatcher("vista/userdata.jsp");
@@ -109,7 +115,7 @@ public class Core extends HttpServlet {
 		
 		}
 		catch(NullPointerException e){
-			RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("vista/test.jsp");
 			dispatcher.forward(request, response);
 		}
 			
@@ -120,9 +126,10 @@ public class Core extends HttpServlet {
 	
 	
 	// --> hibernate
-//		public Core() {
-//			testingDAO = new TestingDAO();
-//		}
+	public Core() {
+		testingDAO = new TestingDAO();
+	}
+
 
 		@SuppressWarnings("unused")
 		private void persist(SecureLogin entity) {
@@ -150,7 +157,7 @@ public class Core extends HttpServlet {
 			testingDAO.openCurrentSessionwithTransaction();
 			SecureLogin login = testingDAO.buscarUsuario(user);
 			testingDAO.closeCurrentSessionwithTransaction();
-
+			System.out.println(login);
 			return login;
 		}
 

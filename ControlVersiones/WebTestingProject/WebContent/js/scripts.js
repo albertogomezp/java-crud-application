@@ -43,15 +43,18 @@ function callJqueryAjax(action){
 	    );
 	  };
   function moveUserData(action){
+	  console.log("init script");
 	  //var action = $('#name').val();
-	  var user = document.getElementById(username);
-	  var password = document.getElementById(password);
+	  var user = document.getElementById("Username").value;
+	  var password = document.getElementById("password").value;
+	  console.log(user);
+	  console.log(password);
 	  $.ajax(
 	    {
 	      url     : '/WebTestingProject/Core',
 	      method     : 'POST',
 	      data     : {action: action,"user":user,"password":password},
-	      success    : function(resultText){ $('#resultServlet').html(resultText); },
+	      success    : function(resultText){ $('#resultServlet').html(resultText); console.log("success"); },
 	      error : function(jqXHR, exception){
 	        console.log('Error occured!!');
 	      }

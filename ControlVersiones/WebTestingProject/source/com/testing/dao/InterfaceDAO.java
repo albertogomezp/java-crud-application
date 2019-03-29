@@ -1,5 +1,6 @@
 package com.testing.dao;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.hibernate.Session;
@@ -7,7 +8,7 @@ import org.hibernate.Transaction;
 
 import com.testing.model.SecureLogin;
 
-public interface InterfaceDAO {
+public interface InterfaceDAO extends Serializable{
 
 	Session openCurrentSession();
 

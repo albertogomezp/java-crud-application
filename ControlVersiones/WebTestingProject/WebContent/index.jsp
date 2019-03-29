@@ -87,7 +87,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 align-center">
-					<form role="form" class="text-center">
+					
 						<div class="form-group text-center">
 							 
 							<label for="Username" class="text-center">
@@ -108,10 +108,10 @@
 								<input type="checkbox" /> Check me out
 							</label>
 						</div> 
-						<button onclick="moveUserData('signup')" class="btn btn-primary">
+						<button onclick="moveUserData('SecureLogin')" class="btn btn-primary">
 							Submit
 						</button>
-					</form>
+					
 				</div>
 				<div class="col-md-6 bg-dark text-light text-center" id="resultServlet">
 				UwU

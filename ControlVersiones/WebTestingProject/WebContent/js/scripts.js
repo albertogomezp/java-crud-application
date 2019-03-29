@@ -42,3 +42,19 @@ function callJqueryAjax(action){
 	    }
 	    );
 	  };
+  function moveUserData(action){
+	  //var action = $('#name').val();
+	  var user = document.getElementById(username);
+	  var password = document.getElementById(password);
+	  $.ajax(
+	    {
+	      url     : '/WebTestingProject/Core',
+	      method     : 'POST',
+	      data     : {action: action,"user":user,"password":password},
+	      success    : function(resultText){ $('#resultServlet').html(resultText); },
+	      error : function(jqXHR, exception){
+	        console.log('Error occured!!');
+	      }
+	    }
+	    );
+	  };

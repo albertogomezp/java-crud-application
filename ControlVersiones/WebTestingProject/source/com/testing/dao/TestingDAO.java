@@ -1,5 +1,6 @@
 package com.testing.dao;
 
+import com.agomez.competidor.model.Competidor;
 import com.testing.model.*;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import org.hibernate.cfg.Configuration;
  * @web: www.albertogomp.es
  */
 
-public class TestingDAO implements InterfaceDAO  {
+public class TestingDAO implements InterfaceDAO {
 	private Session currentSession;
 	private Transaction currentTransaction;
 
@@ -47,6 +48,7 @@ public class TestingDAO implements InterfaceDAO  {
 		currentSession.close();
 	}
 
+
 	/* (non-Javadoc)
 	 * @see com.testing.dao.InterfaceDAO#closeCurrentSessionwithTransaction()
 	 */
@@ -67,6 +69,7 @@ public class TestingDAO implements InterfaceDAO  {
  		return sessionFactory;
 	}
 
+
 	/* (non-Javadoc)
 	 * @see com.testing.dao.InterfaceDAO#getCurrentSession()
 	 */
@@ -74,6 +77,7 @@ public class TestingDAO implements InterfaceDAO  {
 	public Session getCurrentSession() {
 		return currentSession;
 	}
+
 
 	/* (non-Javadoc)
 	 * @see com.testing.dao.InterfaceDAO#setCurrentSession(org.hibernate.Session)
@@ -83,6 +87,7 @@ public class TestingDAO implements InterfaceDAO  {
 		this.currentSession = currentSession;
 	}
 
+
 	/* (non-Javadoc)
 	 * @see com.testing.dao.InterfaceDAO#getCurrentTransaction()
 	 */
@@ -90,6 +95,7 @@ public class TestingDAO implements InterfaceDAO  {
 	public Transaction getCurrentTransaction() {
 		return currentTransaction;
 	}
+
 
 	/* (non-Javadoc)
 	 * @see com.testing.dao.InterfaceDAO#setCurrentTransaction(org.hibernate.Transaction)
@@ -99,6 +105,7 @@ public class TestingDAO implements InterfaceDAO  {
 		this.currentTransaction = currentTransaction;
 	} 
 	
+
 	/* (non-Javadoc)
 	 * @see com.testing.dao.InterfaceDAO#buscarUsuario(java.lang.String)
 	 */
@@ -108,6 +115,7 @@ public class TestingDAO implements InterfaceDAO  {
 
 		return login;
 	}
+
 
 	/* (non-Javadoc)
 	 * @see com.testing.dao.InterfaceDAO#findAll()
@@ -119,19 +127,37 @@ public class TestingDAO implements InterfaceDAO  {
 		return users;
 	}
 
-//	public void deleteAll() {
-//		List<Competidor> entityList = findAll();
-//		for (Competidor entity : entityList) {
-//			delete(entity);
-//		}
-//	}
 
 	/* (non-Javadoc)
 	 * @see com.testing.dao.InterfaceDAO#CheckSecurelogin(java.lang.String)
 	 */
 	@Override
 	public SecureLogin CheckSecurelogin(String user) {
-		// TODO Auto-generated method stub
+
 		return null;
+		
 	}
+	/* (non-Javadoc)
+	 * @see com.testing.dao.InterfaceDAO#persist(com.testing.model.SecureLogin)
+	 */
+	@Override
+	public void persist(SecureLogin entity) {
+		getCurrentSession().save(entity);
+	}
+	
+	/* (non-Javadoc)
+	 * @see com.testing.dao.InterfaceDAO#update(com.testing.model.SecureLogin)
+	 */
+	@Override
+	public void update(SecureLogin entity) {
+		getCurrentSession().update(entity);
+	}
+	
+	public void delete(SecureLogin entity) {
+		getCurrentSession().delete(entity);
+	}
+	
+	
+	
+	
 }

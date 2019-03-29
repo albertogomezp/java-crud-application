@@ -15,5 +15,25 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="src" path="/Competidor"/>
+	<classpathentry kind="lib" path="C:/Users/6001211/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar" sourcepath="C:/Users/6001211/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="javax.persistence-api-2.2.jar"/>
+			<attribute name="maven.groupId" value="javax.persistence"/>
+			<attribute name="maven.artifactId" value="javax.persistence-api"/>
+			<attribute name="maven.version" value="2.2"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/6001211/.m2/repository/org/hibernate/hibernate-core/5.4.1.Final/hibernate-core-5.4.1.Final.jar" sourcepath="C:/Users/6001211/.m2/repository/org/hibernate/hibernate-core/5.4.1.Final/hibernate-core-5.4.1.Final-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="hibernate-core-5.4.1.Final.jar"/>
+			<attribute name="maven.groupId" value="org.hibernate"/>
+			<attribute name="maven.artifactId" value="hibernate-core"/>
+			<attribute name="maven.version" value="5.4.1.Final"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

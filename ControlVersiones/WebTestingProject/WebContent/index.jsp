@@ -60,25 +60,25 @@
 				</div>
 			</nav>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-3 text-center">
 					 
 					<button type="button" class="btn btn-success" onclick="callJqueryAjax('testconection')">
 						Servlet
 					</button>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 text-center">
 					 
 					<button type="button" class="btn btn-secondary">
 						Button
 					</button>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 text-center">
 					 
 					<button type="button" class="btn btn-info">
 						Button
 					</button>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3 text-center">
 					 
 					<button type="button" class="btn btn-warning">
 						Button
@@ -86,14 +86,14 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-3 align-center">
 					<form role="form" class="text-center">
 						<div class="form-group text-center">
 							 
 							<label for="Username" class="text-center">
 								Username
 							</label>
-							<input type="text" class="form-control text-center" id="Username" name="username" placeholder="your username"/>
+							<input type="text" class="form-control text-center" id="Username" name="user" placeholder="your username"/>
 						</div>
 						<div class="form-group text-center">
 							 
@@ -108,7 +108,7 @@
 								<input type="checkbox" /> Check me out
 							</label>
 						</div> 
-						<button type="submit" class="btn btn-primary">
+						<button onclick="" class="btn btn-primary">
 							Submit
 						</button>
 					</form>

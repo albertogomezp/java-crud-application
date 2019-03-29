@@ -31,4 +31,8 @@ public interface InterfaceDAO {
 
 	SecureLogin CheckSecurelogin(String user);
 
+	void update(SecureLogin entity);
+
+	void persist(SecureLogin entity);
+
 }

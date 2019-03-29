@@ -78,10 +78,7 @@ public class CompetidorDAO implements InterfaceDAO<Competidor, String, SecureLog
 	public void update(Competidor entity) {
 		getCurrentSession().update(entity);
 	}
-	public void delete(Competidor entity) {
-		getCurrentSession().delete(entity);
-	}
-	
+
 	public Competidor findById(String id) {
 		Competidor competidor = (Competidor) getCurrentSession().get(Competidor.class,(Integer.parseInt(id)));
 		return competidor;
@@ -93,7 +90,9 @@ public class CompetidorDAO implements InterfaceDAO<Competidor, String, SecureLog
 		return login;
 	}
 
-
+	public void delete(Competidor entity) {
+		getCurrentSession().delete(entity);
+	}
 
 	@SuppressWarnings("unchecked")
 	public List<Competidor> findAll() {

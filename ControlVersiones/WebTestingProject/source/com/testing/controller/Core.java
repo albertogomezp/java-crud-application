@@ -7,12 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.testing.model.*;
+
 /**
  * Servlet implementation class Core
  */
 @WebServlet("/Core")
 public class Core extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static SecureLogin currentUser = new SecureLogin(); // In case of needing the actual user
+
        
     /**
      * @see HttpServlet#HttpServlet()

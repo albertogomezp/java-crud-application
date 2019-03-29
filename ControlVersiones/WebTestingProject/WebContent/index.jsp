@@ -3,15 +3,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Testing</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+	<meta charset="ISO-8859-1">
+	<script>    <%@include file="js/scripts.js" %>	</script>
+	<style>	    <%@include file="css/style.css" %>	</style>
+	
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<meta charset="ISO-8859-1">
-<script>    <%@include file="js/scripts.js" %>	</script>
-
-<title>Testing</title>
 </head>
 <body onload="updateClock(); setInterval('updateClock()', 1000 )"><div class="container-fluid">
 	<div class="row">
@@ -63,8 +62,8 @@
 			<div class="row">
 				<div class="col-md-3">
 					 
-					<button type="button" class="btn btn-success">
-						Button
+					<button type="button" class="btn btn-success" onclick="callJqueryAjax('testconection')">
+						Servlet
 					</button>
 				</div>
 				<div class="col-md-3">
@@ -88,32 +87,22 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3">
-					<form role="form">
-						<div class="form-group">
+					<form role="form" class="text-center">
+						<div class="form-group text-center">
 							 
-							<label for="exampleInputEmail1">
-								Email address
+							<label for="Username" class="text-center">
+								Username
 							</label>
-							<input type="email" class="form-control" id="exampleInputEmail1" />
+							<input type="text" class="form-control text-center" id="Username" name="username" placeholder="your username"/>
 						</div>
-						<div class="form-group">
+						<div class="form-group text-center">
 							 
-							<label for="exampleInputPassword1">
+							<label for="pasword" class="text-center">
 								Password
 							</label>
-							<input type="password" class="form-control" id="exampleInputPassword1" />
+							<input type="password" class="form-control text-center" id="password" name="password" placeholder="your password"/>
 						</div>
-						<div class="form-group">
-							 
-							<label for="exampleInputFile">
-								File input
-							</label>
-							<input type="file" class="form-control-file" id="exampleInputFile" />
-							<p class="help-block">
-								Example block-level help text here.
-							</p>
-						</div>
-						<div class="checkbox">
+						<div class="checkbox text-right">
 							 
 							<label>
 								<input type="checkbox" /> Check me out
@@ -124,8 +113,8 @@
 						</button>
 					</form>
 				</div>
-				<div class="col-md-6 bg-dark text-light text-center">
-				Text
+				<div class="col-md-6 bg-dark text-light text-center" id="resultServlet">
+				UwU
 				</div>
 				<div class="col-md-3">
 				</div>

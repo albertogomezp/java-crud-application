@@ -28,3 +28,17 @@ function updateClock ( ) // A simple clock for the web.
   // Update the time display
   document.getElementById("clock").firstChild.nodeValue = currentTimeString;
 }
+function callJqueryAjax(action){
+	  //var action = $('#name').val();
+	  $.ajax(
+	    {
+	      url     : '/WebTestingProject/Core',
+	      method     : 'POST',
+	      data     : {action: action},
+	      success    : function(resultText){ $('#resultServlet').html(resultText); },
+	      error : function(jqXHR, exception){
+	        console.log('Error occured!!');
+	      }
+	    }
+	    );
+	  };

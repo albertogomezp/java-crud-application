@@ -11,38 +11,100 @@
 	<title>SGJDB</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark"> <a
-		class="navbar-brand" href="#">Bienvenido, <%out.print(request.getAttribute("displayname"));%></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-		data-target="#navbarSupportedContent"
-		aria-controls="navbarSupportedContent" aria-expanded="false"
-		aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-5">
-			<li class="nav-item active"><a class="nav-link"  href="adminCompetidor?action=index">Menu
-				<span class="sr-only">(current)</span>
-			</a></li>
-			<li class="nav-item"><a class="nav-link" onclick="callJqueryAjax('mostrar')">Listado</a></li>				
-			<li class="nav-item"><a class="nav-link" onclick="callJqueryAjax('nuevo')">Nuevo</a></li>
-			<li class="nav-item">
-				<a class="nav-link" href="adminCompetidor?action=logout" tabindex="-1">Cerrar Sesión</a>
-			</li>
-		</ul>		
-<!-- 		<form class="form-inline my-2 my-lg-0" > -->
-<!-- 			<input name="id" class="form-control mr-sm-2" type="search" placeholder="ID Competidor"> -->
-<!-- 			<button class="btn btn-outline-success my-2 my-sm-0"  onclick="AbrirModalbusqueda()" >Buscar</button> -->
-<!-- 		</form> -->
+	<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-2">
+					<img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg" />
+				</div>
+				<div class="col-md-8">
+					<h3>
+						h3. Lorem ipsum dolor sit amet.
+					</h3>
+					<blockquote class="blockquote">
+						<p class="mb-0">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+						</p>
+						<footer class="blockquote-footer">
+							Someone famous in <cite>Source Title</cite>
+						</footer>
+					</blockquote>
+				</div>
+				<div class="col-md-2">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-success">
+						Button
+					</button>
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-secondary">
+						Button
+					</button>
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-info">
+						Button
+					</button>
+				</div>
+				<div class="col-md-3">
+					 
+					<button type="button" class="btn btn-warning">
+						Button
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<form role="form">
+						<div class="form-group">
+							 
+							<label for="exampleInputEmail1">
+								Email address
+							</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" />
+						</div>
+						<div class="form-group">
+							 
+							<label for="exampleInputPassword1">
+								Password
+							</label>
+							<input type="password" class="form-control" id="exampleInputPassword1" />
+						</div>
+						<div class="form-group">
+							 
+							<label for="exampleInputFile">
+								File input
+							</label>
+							<input type="file" class="form-control-file" id="exampleInputFile" />
+							<p class="help-block">
+								Example block-level help text here.
+							</p>
+						</div>
+						<div class="checkbox">
+							 
+							<label>
+								<input type="checkbox" /> Check me out
+							</label>
+						</div> 
+						<button type="submit" class="btn btn-primary">
+							Submit
+						</button>
+					</form>
+				</div>
+				<div class="col-md-6">
+				</div>
+				<div class="col-md-3">
+				</div>
+			</div>
+		</div>
 	</div>
-</nav> 	
-<div id="wrapper" class="container-fluid text-center bg-none">
-	<h1 class="text-center" >SGJDB</h1>
-	<h3>Sistema gestor Judo database</h3>
-	<div id="bod" class="text-center">
-		<button type="button" class="btn btn-primary text-center" onclick="callJqueryAjax('mostrar')" >	Listado de competidores</button>
-	</div>
-</div>	
+</div>
 </body>
 </html>
